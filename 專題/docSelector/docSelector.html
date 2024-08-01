@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>診所預約</title>
+    <link rel="stylesheet" href="../../header/header.css" />
+    <link rel="stylesheet" href="../../footer/footer.css" />
+    <link rel="stylesheet" href="./docSelector.css" />
+  </head>
+  <body>
+    <header class="homeNavBar">
+      <div class="navBarShowOut">
+        <img
+          class="closeNavBarShowOut"
+          src="https://img.icons8.com/ios-glyphs/60/FFFFFF/delete-sign.png"
+        />
+        <a href="#">首頁</a>
+        <a href="#">預約服務</a>
+        <a href="#">購物</a>
+        <a href="#">衛教知識</a>
+      </div>
+      <img
+        class="hamburger"
+        src="https://img.icons8.com/stamp/32/menu.png"
+        alt="menu"
+      />
+      <span class="navItemLeft" id="navHome">首頁</span>
+      <span class="navItemLeft" id="navReserve">預約服務</span>
+      <div class="logoBg">
+        <a href="./home.html">
+          <div>
+            <img
+              id="navBarLogo"
+              src="../../大專素材/logo/螢幕擷取畫面 2024-06-29 164954.png"
+              alt="Logo"
+            /></div
+        ></a>
+      </div>
+      <span class="navItemRight" id="navShop">購物</span>
+      <span class="navItemRight" id="navEdu">衛教知識</span>
+      <div class="navIcon">
+        <a href="#"><i style="color: black" class="fa-regular fa-user"></i></a>
+        <a href="#"
+          ><i style="color: black" class="fa-solid fa-cart-shopping"></i
+        ></a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="page">
+        <a href="../home.html">
+          <img
+            id="prev"
+            src="https://img.icons8.com/flat-round/64/arrow--v1.png"
+        /></a>
+
+        <video
+          muted
+          loop
+          src="../../大專素材/影片/狗/3045714-sd_640_360_25fps.mp4"
+        ></video>
+        <div class="selectTop docSelectTop">
+          <input id="docDate" type="date" />
+          <select name="docTime" id="docTime">
+            <option value="選擇時段">選擇時段</option>
+            <option value="0-2">0:00~2:00</option>
+            <option value="2-4">2:00~4:00</option>
+            <option value="4-6">4:00~6:00</option>
+            <option value="6-8">6:00~8:00</option>
+            <option value="8-10">8:00~10:00</option>
+            <option value="10-12">10:00~12:00</option>
+            <option value="12-14">12:00~14:00</option>
+            <option value="14-16">14:00~16:00</option>
+            <option value="16-18">16:00~18:00</option>
+            <option value="18-20">18:00~20:00</option>
+            <option value="20-22">20:00~22:00</option>
+            <option value="22-24">22:00~24:00</option>
+          </select>
+          <select name="docLocation" id="docLocation">
+            <option value="選擇地區">選擇地區</option>
+            <option>台北</option>
+            <option>新北</option>
+            <option>桃園</option>
+            <option>新竹</option>
+            <option>苗栗</option>
+            <option>台中</option>
+            <option>彰化</option>
+            <option>南投</option>
+            <option>雲林</option>
+            <option>嘉義</option>
+            <option>台南</option>
+            <option>屏東</option>
+            <option>高雄</option>
+          </select>
+          <select name="docSubject" id="docSubject">
+            <option value="選擇專科">選擇專科</option>
+          </select>
+        </div>
+        <div class="selectbottom">
+          <div class="selectbottomLeft">
+            <div>
+              <span class="selectbottomLeft24hour">24小時急診</span
+              ><input type="checkbox" />
+            </div>
+            <div><span>犬科</span><input type="checkbox" /></div>
+            <div><span>貓科</span><input type="checkbox" /></div>
+
+            <div><span>疫苗</span><input type="checkbox" /></div>
+          </div>
+          <div class="selectbottomRight">
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+            <div class="docHospInfo">
+              <div class="docHospInfoTop">
+                <div class="hosName">慈愛動物醫院</div>
+                <div class="hosAddress">台中市公益路仁孝路178巷8號</div>
+                <div class="hosInsurance">醫療|健保</div>
+                <div class="hos24hr">24小時急診</div>
+                <button class="rightNow">立即預約</button>
+              </div>
+              <div id="docHospInfoSeeMore" onclick="toggleInfoBottom(this)">
+                <img
+                  id="infoSeeMore"
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/windows/32/circled-down-2.png"
+                />
+              </div>
+
+              <div class="docHospInfoBottom">
+                <div>
+                  <img
+                    id="docPic"
+                    src="../../大專素材/圖片/醫生/istockphoto-1372002650-612x612.jpg"
+                    alt=""
+                  />
+                </div>
+                <div><span id="docName">xxx醫師</span></div>
+                <div class="hosDocInfoDetail">
+                  <span id="docPro">骨科專業</span>
+                  <hr />
+                  <span id="docYear">資歷五年</span>
+                  <hr />
+                  <span id="docProInfo">骨癌、骨骼發育</span>
+                </div>
+                <div>
+                  <input type="checkbox" name="chooseDoc" id="chooseDoc" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer" onclick="toggleFooter()">
+          <div class="footerIcon">
+            <img
+              src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/96/FFFFFF/external-instagram-social-media-tanah-basah-basic-outline-tanah-basah.png"
+            />
+            <img src="https://img.icons8.com/ios/100/FFFFFF/line-me.png" />
+            <img
+              src="https://img.icons8.com/ios-filled/100/FFFFFF/twitterx--v2.png"
+            />
+          </div>
+          <div id="buttonMoveUp">
+            <img
+              src="https://img.icons8.com/ios-filled/100/FFFFFF/up--v1.png"
+            />
+
+            <p>see more</p>
+            <span>地址:台中市公益路 二段 338號 8樓之8</span>
+            <span>連絡電話 : 04-2278-5847</span>
+            <span>隱私權政策</span>
+
+            <hr />
+            <span>Copy right©2024 Furry Health寵醫網</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底下是fontawesome icon  -->
+    <script
+      src="https://kit.fontawesome.com/a89a722df2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./docSelector .js"></script>
+    <script src="../../header/header.js"></script>
+  </body>
+</html>

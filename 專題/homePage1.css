@@ -1,0 +1,253 @@
+@font-face {
+	font-family: "all-text";
+	src: url(../字體/jf2.2四分糖.otf);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	box-sizing: border-box;
+	font-family: "all-text", Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+/* 隱藏 Safari 和 Chrome 的滾動條 */
+.container::-webkit-scrollbar {
+	display: none;
+}
+
+/* 隱藏 IE 和 Edge 的滾動條 */
+.container {
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隱藏 Firefox 的滾動條 */
+.container {
+	scrollbar-width: none; /* Firefox */
+}
+
+.container {
+	height: 100%;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+.page {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	scroll-snap-align: start;
+	position: relative;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+/* 首頁樣式 */
+#page1 {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.page video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.38;
+	z-index: -1; /* 確保視頻在背景 */
+}
+
+.sectionText {
+	font-size: 22px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	width: auto;
+	text-align: center;
+	margin: 0 15%;
+	min-width: 600px;
+}
+.sectionText h2 {
+	font-size: 32px;
+	margin: 20px 0 30px;
+}
+.homeSelect {
+	position: relative;
+	min-width: 600px;
+	min-height: 300px;
+	top: 50px;
+	width: 80%;
+	height: 40%;
+	background: linear-gradient(to top left, #0089a7, #6cabb9);
+	border-radius: 20px;
+}
+
+.selectTop {
+	display: flex;
+	text-align: center;
+	padding: 0px 20px;
+	margin: 10px;
+}
+
+.selectTop div:hover {
+	background-color: #07738b;
+	border-radius: 20px;
+}
+.changeColor {
+	background-color: #07738b;
+	border-radius: 20px;
+}
+.selectTop div {
+	padding: 10px;
+	margin: 10px auto;
+}
+.selectTop hr {
+	position: relative;
+	top: 20px;
+	height: 100px;
+}
+.selectTop div img {
+	padding: 20px 10px;
+	width: 50%;
+}
+.selectTop div p {
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 10px;
+}
+.selectBottom {
+	justify-content: center;
+	margin: 10px auto;
+	display: none;
+}
+.docSelectBottom {
+	display: flex;
+}
+.selectBottom input,
+select {
+	font-family: "fat-text";
+	font-weight: 600;
+	border-radius: 8px;
+	width: 180px;
+	margin: 1% 4%;
+	outline: none;
+	border: 0;
+	padding: 8px;
+	font-size: 16px;
+	box-shadow: 1px 1px 1cqw rgb(85, 85, 85);
+}
+
+.selectBottom input[type="submit"] {
+	width: 80px;
+	margin-left: 80px;
+}
+#docConfirm:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+#beautyConfirm:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+#nightConfirm:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+.footer {
+	width: 100%;
+	height: 300px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	bottom: -270px;
+	transition: bottom 0.5s ease;
+	backdrop-filter: blur(10px);
+}
+.footer-expanded {
+	bottom: 0; /* 展開時頁尾上移到可見位置 */
+}
+.footer #buttonMoveUp {
+	width: 40px;
+	height: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	left: 50%;
+	bottom: 290px;
+	border-top-left-radius: 70px;
+	border-top-right-radius: 70px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	cursor: pointer;
+	transform: translate(-50%, -50%);
+}
+.footer img {
+	width: 30px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.footer p {
+	color: white;
+	font-size: 9px;
+	position: relative;
+	left: 2px;
+	visibility: hidden;
+}
+.footer span {
+	font-weight: 200;
+	line-height: 60px;
+	color: white;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	width: 1000px;
+	position: relative;
+	right: 480px;
+}
+.footerIcon {
+	display: flex;
+	cursor: pointer;
+}
+.footerIcon img {
+	display: block;
+	position: relative;
+	width: 35px;
+	margin: 10px 20px;
+	left: 75%;
+	top: 150px;
+}
+.footer hr {
+	position: relative;
+	right: 1500px;
+	width: 3000px;
+}
+.footer div:hover p {
+	visibility: visible;
+}
+
+.dots-nav {
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 6;
+}
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 5px 0;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.dot.active {
+	background-color: rgb(54, 54, 54);
+}
