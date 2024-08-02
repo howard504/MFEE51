@@ -117,9 +117,11 @@ body {
 }
 .selectTop div p {
 	color: white;
-	font-size: 20px;
+	font-size: 28px;
 	margin-top: 20px;
 	padding: 10px;
+	font-weight: 600;
+	letter-spacing: 7px;
 }
 .selectBottom {
 	justify-content: center;
