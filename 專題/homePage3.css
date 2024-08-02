@@ -52,10 +52,16 @@
 	line-clamp: 2;
 }
 
-.commonNumber {
+.unit {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	justify-content: center;
+}
+.unit p {
 	color: #ffffff;
-	font-size: 20px;
-	margin: 30px auto;
+	font-size: 26px;
+	margin: 10px 5px;
 }
 
 .commonButton {
